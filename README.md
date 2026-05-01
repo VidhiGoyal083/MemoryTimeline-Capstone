@@ -17,8 +17,6 @@ This project uses browser localStorage, so it does not need MongoDB or any backe
 - Optional photo/video upload support
 - Data saved in browser localStorage
 - Responsive design
-- Built without Tailwind CSS
-- Built without MongoDB
 
 ## Tech Stack
 
@@ -123,6 +121,4 @@ Displays a single memory card with title, date, story, mood, edit, and delete op
 
 Contains the form for adding and editing memories.
 
-## Author
 
-Created as a React clone project for a memory timeline website.
