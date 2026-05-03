@@ -1,11 +1,10 @@
-import { X } from "lucide-react";
 import { moods } from "../data/memories.js";
 
 function formatDate(value) {
   return new Date(value + "T00:00:00").toLocaleDateString("en-US", {
     month: "long",
     day: "numeric",
-    year: "numeric",
+    year: "numeric"
   });
 }
 
@@ -41,7 +40,7 @@ function MemoryCard({ memory, type, onEdit, onDelete }) {
         <button onClick={() => onEdit(memory)}>Edit</button>
 
         <button className="delete" onClick={() => onDelete(memory.id)}>
-          <X size={13} />
+          ×
         </button>
 
         {type === "timeline" && (
