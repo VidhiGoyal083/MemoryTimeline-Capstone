@@ -1,4 +1,4 @@
-import MemoryCard from './MemoryCard';
+import MemoryCard from "./MemoryCard.jsx";
 
 function MemoryGrid({ memories, onEdit, onDelete }) {
   return (
