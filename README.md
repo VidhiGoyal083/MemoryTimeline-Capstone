@@ -24,7 +24,6 @@ This project uses browser localStorage, so it does not need MongoDB or any backe
 - Vite
 - CSS
 - localStorage
-- lucide-react icons
 
 ## Folder Structure
 
@@ -82,14 +81,6 @@ npm run build
 ## Preview Build
 
 npm run preview
-
-## Important Notes
-
-This project does not use MongoDB. All memory data is stored in browser localStorage.
-
-If you clear browser storage, saved memories will be removed.
-
-Large videos may not save properly in localStorage because browser storage has a size limit. Images work better for this setup.
 
 ## Components
 
