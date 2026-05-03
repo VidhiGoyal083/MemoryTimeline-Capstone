@@ -1,17 +1,14 @@
-import { useEffect, useMemo, useState } from 'react';
-import { Search } from 'lucide-react';
+import { useEffect, useMemo, useState } from "react";
 
-import Header from './components/Header.jsx';
-import Stats from './components/Stats.jsx';
-import MoodFilters from './components/MoodFilters.jsx';
-import Timeline from './components/Timeline.jsx';
-import MemoryGrid from './components/MemoryGrid.jsx';
-import MemoryModal from './components/MemoryModal.jsx';
+import Header from "./components/Header.jsx";
+import Stats from "./components/Stats.jsx";
+import MoodFilters from "./components/MoodFilters.jsx";
+import Timeline from "./components/Timeline.jsx";
+import MemoryGrid from "./components/MemoryGrid.jsx";
+import MemoryModal from "./components/MemoryModal.jsx";
 
-import { STORAGE_KEY, defaultMemories } from './data/memories.js';
-
-import './App.css';
-
+import { STORAGE_KEY, defaultMemories } from "./data/memories.js";
+import "./App.css";
 
 function App() {
   const [memories, setMemories] = useState(() => {
@@ -19,9 +16,9 @@ function App() {
     return saved ? JSON.parse(saved) : defaultMemories;
   });
 
-  const [view, setView] = useState('timeline');
-  const [query, setQuery] = useState('');
-  const [mood, setMood] = useState('all');
+  const [view, setView] = useState("timeline");
+  const [query, setQuery] = useState("");
+  const [mood, setMood] = useState("all");
   const [modalOpen, setModalOpen] = useState(false);
   const [editing, setEditing] = useState(null);
 
@@ -34,7 +31,7 @@ function App() {
       .sort((a, b) => new Date(a.date) - new Date(b.date))
       .filter((item) => {
         const q = query.toLowerCase();
-        const matchMood = mood === 'all' || item.mood === mood;
+        const matchMood = mood === "all" || item.mood === mood;
         const matchText =
           item.title.toLowerCase().includes(q) ||
           item.story.toLowerCase().includes(q);
@@ -45,7 +42,7 @@ function App() {
 
   function saveMemory(data) {
     if (data.id) {
-      setMemories(memories.map((m) => (m.id === data.id ? data : m)));
+      setMemories(memories.map((memory) => (memory.id === data.id ? data : memory)));
     } else {
       setMemories([{ ...data, id: Date.now() }, ...memories]);
     }
@@ -71,7 +68,7 @@ function App() {
         <Stats memories={memories} />
 
         <div className="search">
-          <Search size={14} />
+          <span className="search-icon">⌕</span>
           <input
             placeholder="Search memories..."
             value={query}
@@ -81,7 +78,7 @@ function App() {
 
         <MoodFilters mood={mood} setMood={setMood} />
 
-        {view === 'timeline' ? (
+        {view === "timeline" ? (
           <Timeline memories={filtered} onEdit={openModal} onDelete={deleteMemory} />
         ) : (
           <MemoryGrid memories={filtered} onEdit={openModal} onDelete={deleteMemory} />
