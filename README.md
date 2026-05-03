@@ -2,7 +2,6 @@
 
 Chronicle is a React-based memory timeline app inspired by a clean personal journal UI. Users can view memories in timeline or grid layout, filter by mood, search memories, and add/edit/delete memories.
 
-This project uses browser localStorage, so it does not need MongoDB or any backend.
 
 ## Features
 
