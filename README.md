@@ -27,6 +27,7 @@ This project uses browser localStorage, so it does not need MongoDB or any backe
 
 ## Folder Structure
 
+```txt
 Memory-Timeline/
 ├── public/
 │   ├── favicon.svg
@@ -57,6 +58,7 @@ Memory-Timeline/
 ├── package.json
 ├── README.md
 └── vite.config.js
+```
 
 ## Installation
 
