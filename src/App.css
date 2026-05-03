@@ -481,3 +481,72 @@ textarea {
   object-fit: cover;
   display: block;
 }
+.search-icon {
+  font-family: Arial, sans-serif;
+  color: #b3aaa2;
+  font-size: 15px;
+}
+
+.calendar-symbol {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  color: #2d241e;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.file-input {
+  height: auto;
+  min-height: 37px;
+  padding: 8px;
+  border: 1px dashed #d5cec7;
+  border-radius: 5px;
+  background: white;
+  color: #8d837b;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.media-preview {
+  margin-top: 18px;
+  border: 1px solid #ded8d2;
+  border-radius: 7px;
+  padding: 12px;
+  background: #fffdfb;
+}
+
+.media-preview img,
+.media-preview video {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.media-preview button {
+  margin-top: 10px;
+  height: 32px;
+  border: 1px solid #ded8d2;
+  background: white;
+  border-radius: 5px;
+  color: #635951;
+}
+
+.card-media {
+  margin-bottom: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #eee8e1;
+}
+
+.card-media img,
+.card-media video {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
