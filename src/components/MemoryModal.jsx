@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { CalendarDays, X } from "lucide-react";
 import { colors, moods } from "../data/memories.js";
 
 function MemoryModal({ memory, onClose, onSave }) {
@@ -11,7 +10,7 @@ function MemoryModal({ memory, onClose, onSave }) {
     mood: memory?.mood || "hopeful",
     color: memory?.color || colors[0],
     media: memory?.media || null,
-    mediaType: memory?.mediaType || null,
+    mediaType: memory?.mediaType || null
   });
 
   function update(key, value) {
@@ -28,7 +27,7 @@ function MemoryModal({ memory, onClose, onSave }) {
       setForm({
         ...form,
         media: reader.result,
-        mediaType: file.type,
+        mediaType: file.type
       });
     };
 
@@ -46,7 +45,7 @@ function MemoryModal({ memory, onClose, onSave }) {
         <div className="modal-head">
           <h2>{memory ? "Edit Memory" : "New Memory"}</h2>
           <button type="button" onClick={onClose}>
-            <X size={16} />
+            ×
           </button>
         </div>
 
@@ -70,7 +69,7 @@ function MemoryModal({ memory, onClose, onSave }) {
                 value={form.date}
                 onChange={(e) => update("date", e.target.value)}
               />
-              <CalendarDays size={15} />
+              <span className="calendar-symbol">▣</span>
             </span>
           </label>
         </div>
@@ -138,7 +137,7 @@ function MemoryModal({ memory, onClose, onSave }) {
                 setForm({
                   ...form,
                   media: null,
-                  mediaType: null,
+                  mediaType: null
                 })
               }
             >
