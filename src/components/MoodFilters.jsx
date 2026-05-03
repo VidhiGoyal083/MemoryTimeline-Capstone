@@ -1,5 +1,4 @@
-import { moods } from '../data/memories.js';
-
+import { moods } from "../data/memories.js";
 
 function MoodFilters({ mood, setMood }) {
   return (
@@ -7,7 +6,7 @@ function MoodFilters({ mood, setMood }) {
       {moods.map((item) => (
         <button
           key={item.id}
-          className={mood === item.id ? 'active' : ''}
+          className={mood === item.id ? "active" : ""}
           onClick={() => setMood(item.id)}
         >
           {item.icon} {item.label}
